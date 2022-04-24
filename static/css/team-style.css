@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+body{
+    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgGBgYGBggQBgYGBhYPBgYGDQ8ICRAWFREWFhURExMYHCggGBolGxMTITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NGg0NFSsZFR0rKysrKystNysrKysrKysrKysrKys3KysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAM0A9gMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFRABAQAAAAAAAAAAAAAAAAAAABH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AOziDqqiAKIAogCiAKIAogCiAKIAogCiAKIAogCiAKIAoiAlKyNRWqVkINUrIQapWQg1SshBqlZCDVKyEGqVkINUrIQapWQg1SshBqlZCDVKyEGqVkINUrIQaoypBilSlUUSlBaVKUFKlKQUSlBaVKUFKlKClSlBSpSgpUpQWiUoKVKUFKlKC0SlIKVKUFEoDNKzSqrRWaUGhmlBqlZpQaGaUGhmlBqlZpQaGaUGqM0oNFZpQapWaUGis0oNFZpQaKzSg0VmlBoZqgzSsjStUrIDVKyA1SsgNUrIDVKyA1SsgNUrIDVKyA1SsgNUrIDVKyA1SsgNUrIDVKyA1RkBmlSlVVpUpQWlSlBaVKUFpUpQWlSlBaVKUFpUpQWlSlBaVKUFpUpQWlSlBaVKUFpUpQWlSlBaJUBBmlaVoZpQaGaUGhmlBoZpQaGaUGhmlBoZpQaGaUGhmlBoZpQaGaUGhmlBoZpQaGaUGhmgM0qCi0qALSoAtKgC0qALSoAtKgC0qALSoAtKgC0qALSoAtKgC0qALSoCrREESlZpVVqlZpQapWaUGqVmlBqlZpQapWaUGqVmlBqlZpQapWaUGqVmlBqlZpQapWaUGqVmlBqlZpQapWaUGqM0BkQaVRAFEAUQBRAFEAUQBRAFEAUQBRAFEAUQBRAFEAURAQZFitDIQaGQg0MgNDIQaGQg0MhBoZCDQyEGhkINDIQaGQg0MhBoZCDQyEGhlSDFKlKqrSpSgtKlKC0qUoLSpSgtKlKC0qUoLSpSgtKlKC0qUoLSpSgtKlKC0qUoLSpSgtKlKC1WaAyINKogCiAKIAogCiAKIAogCiAKIAogCiAKIAogCiAKIgP/2Q==");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+.ms-team{
+    text-align: center;
+}
+.head{
+    font-size: 5rem;
+    color: #15499e;
+    margin: 0rem;
+    padding:  0rem;
+}
+.line{
+    background-color: blue;
+    width: 20rem;
+    height: .4rem;
+    border-radius: .8rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+#row1,#row2,#row3,#row4,#row5{
+    margin: 2.5rem 1rem;
+}
+.teambox{
+    display: inline-block;
+    width: 22rem;
+    height: auto;
+    align-content: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 2rem 2.5rem;
+    box-shadow: 0rem 0rem 2.5rem rgba(90, 90, 90, 0.75);
+    background-color: white;
+}
+.teamimage{
+    height: 20rem;
+    width: 20rem;
+    margin:auto;
+    margin-top: .5rem;
+
+}
+.teamimage img
+{
+    height: 19rem;
+    width: 19rem;
+    border-radius: 9.5rem;
+
+}
+.teambox a img
+{
+    margin: .5rem;
+    width: 3.5rem;
+}
+.name {
+    font-size: 2rem;
+    margin: .5rem auto;
+}
+.designation{
+    font-size: 1.5rem;
+    margin: .5rem auto;
+}
+
+@media (max-width:998px) {
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 768px) {
+    html{
+        font-size: 45%;
+    }
+}
+
+.footer
+{
+    position: absolute;
+    width: 100%;
+    /* background-color:rgba(0, 0, 0, 0.158); */
+}
+#bottom
+{
+    width: 35%;
+    display: block;
+    margin: 0px auto;
+    opacity: 75%;
+}
+#up{
+    position: fixed;
+    bottom: 2rem;
+    float: right;
+    left: 93.5%;
+    font-size: 0px;
+    background: rgb(149, 130, 192);
+    border: 2px solid #15499e;
+    padding: 2px;
+    border-radius: 5px;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+#up img{
+    width: 35px;
+}
+#up:hover
+{
+    opacity: 1;
+    background: rgb(198, 172, 255);
+}
+#up:hover img
+{
+    filter: invert();
+}
+@media(max-width: 430px){
+    .teambox{
+        margin: 1.5rem 1rem;
+    }
+    #row1,#row2,#row3,#row4,#row5{
+        margin: 0 0;
+    }
+    #bottom{
+        width: 70%;
+    }
+}

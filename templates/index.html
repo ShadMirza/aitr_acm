@@ -1,0 +1,421 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#1b1b1b1">
+  {% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/css.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slider.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slider3.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slider4.css' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'img/acm-icon.png' %}">
+  <!-- =====BOX ICONS===== -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  {% endblock %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>AITR-ACM Student Chapter</title>
+</head>
+
+<body>
+  <!-- <div class="template">
+          <h1>this is template</h1>
+      </div> -->
+  <!-- <button id="up"><i class="uil uil-angle-up"></i></button> -->
+  {% block nav %}
+  <a id="top"></a>
+  <button id="up"><a href="#top"><i class="uil uil-angle-up"></i></a></button>
+  <!--===== HEADER =====-->
+  <div class="mainbar">
+    <nav class="nav">
+      <input type="checkbox" name="" id="burger">
+      <label for="burger" class="checkbtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="logo-header">
+        <a href="#"><img src="{% static 'img/AITR ACM Student Chapter White-08.png' %}" alt=""></a>
+      </div>
+      <ul id="list">
+        <li class="active"> <a href="index.html">Home</a></li>
+        <li> <a href="#about">About</a></li>
+        <li> <a href="{% url 'events' %}">Events</a></li>
+        <li> <a href="{% url 'team' %}">Team</a></li>
+        <li> <a href="#faqs">FAQs</a></li>
+        <li> <a href="#contactUs">Contact Us</a></li>
+        <li><a href="https://forms.gle/MUF8BRCz6GFfr2Vo6" id="reg" target="blank">Register Now</a></li>
+        <!-- <li><a href="#" class="button">ACM-W</a></li> -->
+      </ul>
+    </nav>
+  </div>
+  {% endblock %}
+  {% block body %}
+  <main class="l-main">
+    <!--===== HOME =====-->
+    <section class="home bd-grid" id="home">
+      <div class="home__data">
+        <h1 class="home__title">Welcome to <br> AITR <span class="home__title-color">ACM</span><br> Student Chapter</h1>
+        <a href="ACM-W/indexacmw.html" class="button">ACM-W</a>
+      </div>
+      <div class="home__img">
+        <img src="{% static 'img/homeimg.png' %}" alt="">
+      </div>
+    </section>
+    <!--===== ABOUT =====-->
+    <section class="about section " id="about">
+      <h2 class="heading">About</h2>
+
+      <div class="about__container bd-grid">
+        <div class="about__img">
+          <img src="{% static 'img/about.png' %}" alt="">
+        </div>
+
+        <div>
+          <!-- <h2 class="about__subtitle">Lorem ipsum dolor sit amet.</h2> -->
+          <p class="about__text">Under the aegis of ACM, the student chapter of AITR is formed with the aim of making
+            current students, future professionals.
+          </p>
+          <br>
+          <p class="about__text"> AITR-ACM plans to host a wide range of events, including technical workshops, guest
+            lectures and networking to connect the students and experts across the computing spectrum and to stay
+            updated with the latest trends in the technical-research world.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--===== FAQs =====-->
+    <section class="faqs" id="faqs">
+      <h2 class="heading">FAQs</h2>
+      <div class="faq">
+        <div class="question">
+          <h3>What is the participation fee?</h3>
+          <i class="uil uil-angle-down"></i>
+        </div>
+        <div class="answer">
+          <p>Just some enthusiasm and an open mind are enough! We don't charge any money!</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h3>How do I register for ACM? </h3>
+          <i class="uil uil-angle-down"></i>
+        </div>
+        <div class="answer">
+          <p>Click on the "Register Now" button in menu and join us. For any further information, feel free to contact
+            us.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h3>Who all can participate?</h3>
+          <i class="uil uil-angle-down"></i>
+        </div>
+        <div class="answer">
+          <p>Everyone can participate! If you are enthusiastic to level up your skills, then you are most welcome! But
+            yes, you need to commit an year for the program!</p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question">
+          <h3>Why should I participate in ACM?</h3>
+          <i class="uil uil-angle-down"></i>
+        </div>
+        <div class="answer">
+          <p>Our main aim is to bridge the gap between our members and technology. We conduct many seminars and events
+            to make learning easy and fun! From learning about latest technologies by resources provided by the core
+            team to an excellent opportunity to network with like-minded people, we help students get it! </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question">
+          <h3>Being a part of this program, what all opportunities will come your way?</h3>
+          <i class="uil uil-angle-down"></i>
+        </div>
+        <div class="answer">
+          <p>You'll get a chance to explore new technologies and eventually will expand your knowledge and interest!</p>
+        </div>
+      </div>
+    </section>
+
+    <!--===== CONTACT =====-->
+    <section>
+      <div class="contactUs" id="contactUs">
+
+        <div class="title">
+          <h2>Get in Touch</h2>
+        </div>
+        <div class="box">
+          <!-- Form -->
+          <div class="contact form">
+            <h3>Send a Message</h3>
+            <form action="https://formspree.io/f/xdoyrbnz" method="POST">
+              <div class="formbox">
+                <div class="row50">
+                  <div class="inputBox">
+                    <span>First Name</span>
+                    <input type="text" placeholder="John" name="first" />
+                  </div>
+                  <div class="inputBox">
+                    <span>Last Name</span>
+                    <input type="text" placeholder="Doe" name="last" />
+                  </div>
+                </div>
+
+                <div class="row50">
+                  <div class="inputBox">
+                    <span>Email</span>
+                    <input type="text" placeholder="College Email" name="email" />
+                  </div>
+                  <div class="inputBox">
+                    <span>Mobile</span>
+                    <input type="text" placeholder="+91 973 832 2839" name="mobile number" />
+                  </div>
+                </div>
+
+                <div class="row100">
+                  <div class="inputBox">
+                    <span>Message</span>
+                    <textarea name="message" placeholder="Write your message here..."></textarea>
+                  </div>
+                </div>
+
+                <div class="row100">
+                  <div class="inputBox">
+                    <input type="submit" value="Send" />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- info Box -->
+          <div class="contact info">
+            <h3>Contact Info</h3>
+            <div class="infoBox">
+              <div>
+                <span>
+                  <ion-icon name="location"></ion-icon>
+                </span>
+                <p>
+                  Bypass Road Behind, Square,
+                  <br />
+                  Malwa County,Manglaya Sadak,
+                  <br />
+                  Indore,Madhya Pradesh 453771
+                </p>
+              </div>
+              <div>
+                <span>
+                  <ion-icon name="mail"></ion-icon>
+                </span>
+                <a href="mailto:it-rpa130@acropolis.in">aitracm@gmail.com</a>
+              </div>
+              <div>
+                <span>
+                  <ion-icon name="call"></ion-icon>
+                </span>
+                <a href="tel:+91 896 225 6650">+91 896 225 6650</a>
+              </div>
+
+              <!-- Social Media Links-->
+              <ul class="sci">
+                <li><a href="https://www.facebook.com/ACMAcropolis-113087344487615">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a></li>
+                <li><a href="https://twitter.com/AITR_ACM">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a></li>
+                <li><a href="https://www.linkedin.com/company/acm-aitr">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a></li>
+                <li><a href="https://www.instagram.com/aitr_acm/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Map -->
+          <div class="contact map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.4915267882093!2d75.9409654142785!3d22.8212975295488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39631cf455b4cec3%3A0x426141aa8141f7a5!2sAcropolis%20Institute%20Of%20Technology%20And%20Research%20-%20AITR!5e0!3m2!1sen!2sin!4v1636285970373!5m2!1sen!2sin"
+              style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="footsub">
+        <span>© Copyright<b> AITR-ACM </b>. All Rights Reserved</span>
+      </div>
+      <div class="footer">
+        <div id="acmlogo"><img src="{% static 'img/team/acm-logo-1.png' %}" alt="acm logo">
+          <span>© Copyright<b> AITR-ACM </b>. All Rights Reserved</span>
+        </div>
+        <div id="acrologo"><img src="{% static 'img/team/acro_logo.png' %}" alt=""></div>
+        <div id="slideshow">
+          <p id="dev">Developed By:</p>
+          <div class="slideshow-container" id="myImg">
+
+            <div class="mySlides fade">
+              <img src="{% static 'img/team/MegheshSolanki.jpeg' %}">
+
+            </div>
+
+            <div class="mySlides fade">
+              <img src="{% static 'img/team/LeenaGhatiya.jpeg' %}">
+
+            </div>
+
+            <div class="mySlides fade">
+              <img src="{% static 'img/team/RanakAgrawal.jpeg' %}">
+
+            </div>
+
+            <div class="mySlides fade">
+              <img src="{% static 'img/team/PrakharGupta.jpeg' %}">
+
+            </div>
+
+            <div class="mySlides fade">
+              <img src="{% static 'img/team/NamitPrajapati.jpeg' %}">
+
+            </div>
+
+          </div>
+          <br>
+
+          <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) { slideIndex = 1 }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " active";
+              setTimeout(showSlides, 4000); // Change image every 2 seconds
+            }
+          </script>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close"><i class="uil uil-multiply"></i></span>
+
+            <!-- slider3 included -->
+            <div class="slidershow middle modal-content" id="img01">
+              <div class="slides">
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+                <input type="radio" name="r" id="r5">
+                <div class="slide s1">
+                  <img src="{% static 'img/team/MegheshSolanki.jpeg' %}">
+                </div>
+                <div class="slide">
+                  <img src="{% static 'img/team/LeenaGhatiya.jpeg' %}">
+                </div>
+                <div class="slide">
+                  <img src="{% static 'img/team/RanakAgrawal.jpeg' %}">
+                </div>
+                <div class="slide">
+                  <img src="{% static 'img/team/PrakharGupta.jpeg' %}">
+                </div>
+                <div class="slide">
+                  <img src="{% static 'img/team/NamitPrajapati.jpeg' %}">
+                </div>
+              </div>
+              <div class="navigation">
+                <label for="r1" class="bar"></label>
+                <label for="r2" class="bar"></label>
+                <label for="r3" class="bar"></label>
+                <label for="r4" class="bar"></label>
+                <label for="r5" class="bar"></label>
+              </div>
+            </div>
+            <!-- <div id="caption"></div> -->
+          </div>
+
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function () {
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+              modal.style.display = "none";
+            }
+          </script>
+        </div>
+      </div>
+
+
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <!--===== SCROLL REVEAL =====-->
+      <script src="https://unpkg.com/scrollreveal"></script>
+
+      <!--===== MAIN JS =====-->
+      <script src="{% static 'js/main.js' %}"></script>
+      <script src="{% static 'js/faq.js' %}"></script>
+
+      <script>
+        mybutton = document.getElementById("up");
+        // When the user scrolls down 500px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+          if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+          if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("burger").checked = false;
+          }
+        }
+      </script>
+      {% endblock %}
+
+</body>
+
+</html>
