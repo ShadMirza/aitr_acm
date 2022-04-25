@@ -34,332 +34,55 @@
 {% endblock %}
 
 {% block body %}
-<button id="up"><a href="#top"><img src="up-arrow.png" alt="" srcset=""></a></button>
+<button id="up"><a href="#top"><img src="{% static 'img/up-arrow.png' %}" alt="" srcset=""></a></button>
 <div class="ms-team" id="team">
     <h2 class="head" id="ms-h-mentor">Our Mentors</h2>
     <div class="line"></div>
     <div class="ms-mentor-cards">
+        {% for mentor in mentors %}
         <div class="teambox">
             <div class="teamimage">
-                <img src="images/Narendra sir-01.png" alt="">
+                <img src="{{ mentor.image.url }}" alt="">
             </div>
-            <h3 class="name" style="text-align: center;">Prof. Narendra Pal Singh Rathore</h3>
-            <h4 class="designation" style="text-align: center;">Faculty Incharge</h4>
-            <a href="https://member.acm.org/~narendraji_1029" style="text-decoration: none;" target="blank">
+            <h3 class="name" style="text-align: center;">{{ mentor.name | title }}</h3>
+            <h4 class="designation" style="text-align: center;">{{mentor.designation | title }}</h4>
+            {% if mentor.acm_link %}
+            <a href="{{mentor.acm_link}}" style="text-decoration: none;" target="blank">
                 <img src="{% static 'img\acm-icon.png' %}" alt="acm" srcset="">
             </a>
-            <a href="https://www.linkedin.com/in/narendrapalsinghrathore/" style="text-decoration: none;"
-                target="blank">
+            {% endif %}
+            {% if mentor.linkedin_link %}
+            <a href="{{mentor.linkedin_link}}" style="text-decoration: none;" target="blank">
                 <img src="{% static 'img/linkedin.png' %}" alt="linkedin" srcset="">
             </a>
+            {% endif %}
         </div>
-        <div class="teambox">
-            <div class="teamimage">
-                <img src="images/Priyanka ma_am-01.png" alt="">
-            </div>
-            <h3 class="name" style="text-align: center;">Prof. Priyanka Jangde</h3>
-            <h4 class="designation" style="text-align: center;">Faculty Incharge</h4>
-            <a href="https://services.acm.org/public/vcard/vcard.cfm?handle=pjangde" style="text-decoration: none;"
-                target="blank">
-                <img src="images\acm-icon.png" alt="acm" srcset="">
-            </a>
-            <a href="https://www.linkedin.com/in/priyanka-jangde-2489741a/" style="text-decoration: none;"
-                target="blank">
-                <img src="images\linkedin.png" alt="linkedin" srcset="">
-            </a>
-        </div>
+        {% endfor %}
     </div>
     <h2 class="head" id="ms-h-team">Our Team</h2>
     <div class="line"></div>
     <div class="ms-team-cards">
         <div id="row1">
+            {% for member in team %}
             <div class="teambox">
                 <div class="teamimage">
-                    <img src="images/AryanDame.jpeg" alt="">
+                    <img src="{{ member.image.url }}" alt="">
                 </div>
-                <h3 class="name" style="text-align: center;">Aryan Dame</h3>
-                <h4 class="designation" style="text-align: center;">Chairman</h4>
-                <a href="https://member.acm.org/~aryandame" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
+                <h3 class="name" style="text-align: center;">{{ member.name | title }}</h3>
+                <h4 class="designation" style="text-align: center;">{{member.designation | title}}</h4>
+                {% if member.acm_link %}
+                <a href="{{member.acm_link}}" style="text-decoration: none;" target="blank">
+                    <img src="{% static 'img\acm-icon.png' %}" alt="acm" srcset="">
                 </a>
-                <a href="https://www.linkedin.com/in/aryandame" style="text-decoration: none;" target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
+                {% endif %}
+                {% if member.linkedin_link %}
+                <a href="{{member.linkedin_link}}" style="text-decoration: none;" target="blank">
+                    <img src="{% static 'img/linkedin.png' %}" alt="linkedin" srcset="">
                 </a>
+                {% endif %}
             </div>
-            <div class="teambox" id="beta">
-                <div class="teamimage">
-                    <img src="images/PriyanshGupta.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Priyansh Gupta</h3>
-                <h4 class="designation" style="text-align: center;">Vice Chairman</h4>
-                <a href="https://services.acm.org/public/vcard/vcard.cfm?handle=priyanshgupta"
-                    style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/priyansh-gupta-2a483a199" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/NirnayAgrawal.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Nirnay Agrawal</h3>
-                <h4 class="designation" style="text-align: center;">Treasurer</h4>
-                <a href="https://member.acm.org/~nirnay" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/nirnayagrawal" style="text-decoration: none;" target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/MurtazaBohra.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Murtaza Bohra</h3>
-                <h4 class="designation" style="text-align: center;">Secratary</h4>
-                <a href="https://services.acm.org/public/vcard/vcard.cfm?handle=murtazab" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/murtaza-bohra-032559200" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-        </div>
-        <div id="row2">
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/MegheshSolanki.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Meghesh Solanki</h3>
-                <h4 class="designation" style="text-align: center;">Web Master</h4>
-                <a href="https://member.acm.org/~meghesh06" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/meghesh-solanki-97643a212" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/LeenaGhatiya.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Leena Ghatiya</h3>
-                <h4 class="designation" style="text-align: center;">Web Developer</h4>
-                <a href="https://member.acm.org/~leenaghatiya" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/leenaghatiya" style="text-decoration: none;" target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/NamitPrajapati.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Namit Prajapati</h3>
-                <h4 class="designation" style="text-align: center;">Web Developer</h4>
-                <a href="https://member.acm.org/~namitprajapati" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/namit-prajapati-7a1378212" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/PrakharGupta.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Prakhar Gupta</h3>
-                <h4 class="designation" style="text-align: center;">Web Developer</h4>
-                <a href="https://member.acm.org/~prakhar01" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/prakhar-gupta-b824aa200" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-        </div>
-        <div id="row3">
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/RanakAgrawal.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Ranak Agrawal</h3>
-                <h4 class="designation" style="text-align: center;">Web Developer</h4>
-                <a href="https://member.acm.org/~ranak19" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/ranak-agrawal-489b271b0" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/DikshaChhagani.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Diksha Chhagani</h3>
-                <h4 class="designation" style="text-align: center;">Event Head</h4>
-                <a href="https://member.acm.org/~dchhagani" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/diksha-chhagani-32bb8b209" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/BansariJoshi.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Bansari Joshi</h3>
-                <h4 class="designation" style="text-align: center;">Event Head</h4>
-                <a href="https://member.acm.org/~jbansari" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/bansari-joshi-829744215" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/DrishtiLalwani.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Drishti Lalwani</h3>
-                <h4 class="designation" style="text-align: center;">Event Head</h4>
-                <a href="https://member.acm.org/~drishtilalwani" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/drishti-lalwani-b2007620a" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
+            {% endfor %}
 
-        </div>
-        <div id="row4">
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/JatinJangid.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Jatin Jangid</h3>
-                <h4 class="designation" style="text-align: center;">Graphic Designer</h4>
-                <a href="https://member.acm.org/~jangidj" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/jatin-jangid-25j2017" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/PalashShah.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Palash Shah</h3>
-                <h4 class="designation" style="text-align: center;">Graphic Designer</h4>
-                <a href="https://member.acm.org/~palashshah2" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/palash-shah-378325207" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/MahakSoni.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Mahak Soni</h3>
-                <h4 class="designation" style="text-align: center;">Content-Writer</h4>
-                <a href="https://member.acm.org/~mahaks" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/mahak-soni-6078b4224/" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/ShailjaPatil.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Shailja Patil</h3>
-                <h4 class="designation" style="text-align: center;">Content-Writer</h4>
-                <!-- <a href="https://member.acm.org/~mahaks" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a> -->
-                <a href="https://www.linkedin.com/in/shailja-patil-a09a96209/" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-        </div>
-        <div id="row5">
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/NandiniSoni.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Nandini Soni</h3>
-                <h4 class="designation" style="text-align: center;">Social Media Head</h4>
-                <!-- <a href="https://member.acm.org/~mahaks" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a> -->
-                <a href="https://www.linkedin.com/in/nandini-soni-a486a4200" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/HetalUpadhyay.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Hetal Upadhyay</h3>
-                <h4 class="designation" style="text-align: center;">Trainer</h4>
-                <a href="https://member.acm.org/~hetalu" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a>
-                <a href="https://www.linkedin.com/in/hetal-upadhyay-3a5961205" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/SandeshRatnawat.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Sandesh Ratnawat</h3>
-                <h4 class="designation" style="text-align: center;">Trainer</h4>
-                <!-- <a href="https://member.acm.org/~mahaks" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a> -->
-                <a href="https://www.linkedin.com/in/sandesh-ratnawat-827218202" style="text-decoration: none;"
-                    target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
-            <div class="teambox">
-                <div class="teamimage">
-                    <img src="images/ShadMirza.jpeg" alt="">
-                </div>
-                <h3 class="name" style="text-align: center;">Shad Mirza</h3>
-                <h4 class="designation" style="text-align: center;">Trainer</h4>
-                <!-- <a href="https://member.acm.org/~mahaks" style="text-decoration: none;" target="blank">
-                    <img src="images\acm-icon.png" alt="acm" srcset="">
-                </a> -->
-                <a href="https://www.linkedin.com/in/shadmirza/" style="text-decoration: none;" target="blank">
-                    <img src="images\linkedin.png" alt="linkedin" srcset="">
-                </a>
-            </div>
         </div>
     </div>
 </div>

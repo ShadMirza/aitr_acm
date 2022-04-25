@@ -47,14 +47,14 @@
             </div>
             <div class="content--text">
                 <div class="event--menu">
-                    <h4>{{event.date}}</h4>
+                    <h4>{{event.date | upper}}</h4>
                     <ul class="event--detail">
                         <li> <i class="fa fa-clock-o" aria-hidden="true"></i> <span>{{ event.time }}</span></li>
                         <li><i class="fa fa-map-marker" aria-hidden="true"></i><span> {{ event.venue }} </span></li>
                     </ul>
                 </div>
                 <div class="event--text">
-                    <h4> <b>{{ event.name }}</b> </h4>
+                    <h4> <b>{{ event.name | upper }}</b> </h4>
                     <p> {{ event.detail }}
                     </p>
                 </div>
@@ -75,14 +75,14 @@
             </div>
             <div class="content--text">
                 <div class="event--menu">
-                    <h4>{{event.date}}</h4>
+                    <h4>{{event.date | upper}}</h4>
                     <ul class="event--detail">
                         <li> <i class="fa fa-clock-o" aria-hidden="true"></i> <span>{{ event.time }}</span></li>
                         <li><i class="fa fa-map-marker" aria-hidden="true"></i><span> {{ event.venue }} </span></li>
                     </ul>
                 </div>
                 <div class="event--text">
-                    <h4> <b>{{ event.name }}</b> </h4>
+                    <h4> <b>{{ event.name | upper }}</b> </h4>
                     <p> {{ event.detail }}
                     </p>
                 </div>

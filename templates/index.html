@@ -17,8 +17,8 @@
   <link rel="stylesheet" href="{% static 'css/slider4.css' %}">
   <link rel="shortcut icon" type="image/png" href="{% static 'img/acm-icon.png' %}">
   <!-- =====BOX ICONS===== -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   {% endblock %}
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>AITR-ACM Student Chapter</title>
 </head>
@@ -62,7 +62,7 @@
     <section class="home bd-grid" id="home">
       <div class="home__data">
         <h1 class="home__title">Welcome to <br> AITR <span class="home__title-color">ACM</span><br> Student Chapter</h1>
-        <a href="ACM-W/indexacmw.html" class="button">ACM-W</a>
+        <a href="{% url 'indexacmw' %}" class="button">ACM-W</a>
       </div>
       <div class="home__img">
         <img src="{% static 'img/homeimg.png' %}" alt="">
@@ -256,38 +256,19 @@
         <span>© Copyright<b> AITR-ACM </b>. All Rights Reserved</span>
       </div>
       <div class="footer">
-        <div id="acmlogo"><img src="{% static 'img/team/acm-logo-1.png' %}" alt="acm logo">
+        <div id="acmlogo"><img src="{% static 'img/AITR ACM Student Chapter White-08.png' %}" alt="acm logo">
           <span>© Copyright<b> AITR-ACM </b>. All Rights Reserved</span>
         </div>
-        <div id="acrologo"><img src="{% static 'img/team/acro_logo.png' %}" alt=""></div>
+        <div id="acrologo"><img src="{% static 'img/acro_logo.png' %}" alt=""></div>
         <div id="slideshow">
           <p id="dev">Developed By:</p>
           <div class="slideshow-container" id="myImg">
 
+            {% for web_developer in team %}
             <div class="mySlides fade">
-              <img src="{% static 'img/team/MegheshSolanki.jpeg' %}">
-
+              <img src="{{web_developer.image.url}}">
             </div>
-
-            <div class="mySlides fade">
-              <img src="{% static 'img/team/LeenaGhatiya.jpeg' %}">
-
-            </div>
-
-            <div class="mySlides fade">
-              <img src="{% static 'img/team/RanakAgrawal.jpeg' %}">
-
-            </div>
-
-            <div class="mySlides fade">
-              <img src="{% static 'img/team/PrakharGupta.jpeg' %}">
-
-            </div>
-
-            <div class="mySlides fade">
-              <img src="{% static 'img/team/NamitPrajapati.jpeg' %}">
-
-            </div>
+            {% endfor %}
 
           </div>
           <br>
@@ -334,21 +315,11 @@
                 <input type="radio" name="r" id="r3">
                 <input type="radio" name="r" id="r4">
                 <input type="radio" name="r" id="r5">
-                <div class="slide s1">
-                  <img src="{% static 'img/team/MegheshSolanki.jpeg' %}">
+                {% for web_developer in team %}
+                <div class="slide s{{forloop.counter}}">
+                  <img src="{{web_developer.image.url}}">
                 </div>
-                <div class="slide">
-                  <img src="{% static 'img/team/LeenaGhatiya.jpeg' %}">
-                </div>
-                <div class="slide">
-                  <img src="{% static 'img/team/RanakAgrawal.jpeg' %}">
-                </div>
-                <div class="slide">
-                  <img src="{% static 'img/team/PrakharGupta.jpeg' %}">
-                </div>
-                <div class="slide">
-                  <img src="{% static 'img/team/NamitPrajapati.jpeg' %}">
-                </div>
+                {% endfor %}
               </div>
               <div class="navigation">
                 <label for="r1" class="bar"></label>
