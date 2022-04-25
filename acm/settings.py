@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3rjs_krvrz3jpiaqs#2)4bh2qcc$0rjze@wz*!pdw68aitqc!8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aitracm.pythonanywhere.com', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
