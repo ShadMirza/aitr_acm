@@ -8,14 +8,13 @@
 {
     background-color: rgb(149, 130, 192) !important ;
     display: flow-root;
-    padding: 0 10%;
+    padding: 0 5%;
 }
 #check
 {
     display: none;
 }
 .logo-header{
-    
     display: table;
     float: left;
     vertical-align: middle;
@@ -25,14 +24,23 @@
     margin-left: 0;
     margin-bottom: 0;
     margin-right: 0;
-    width: 180px;
-    height: 68px;
+    width: 270px;
+    height: 72px;
     position: relative;
     z-index: 9;
     transition: all 0.5s;
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
+}
+.logo-header img
+{   
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-left: 0px;
+    position: relative;
+    top: 5px;
 }
 .logo-header:before{
     content: "";
@@ -44,7 +52,6 @@
     width: 80%;
     transform: skew(30deg);
     background-color: #15499e;
-    
 }
 .logo-header::after{
     content: "";
@@ -63,13 +70,6 @@
     line-height: 70px;
     text-decoration: none;
 }
-.logo-header img
-{
-    width: 200px;
-    padding: 0;
-    margin: 0;
-    height: 70px;
-}
 #list 
 {
     float: right;
@@ -87,8 +87,9 @@
 #list li a{
     padding: 15px 25px;
     border: 0;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 8px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     color: white;
     opacity: 1;
@@ -166,7 +167,7 @@
     }
     #list li{
         display: block;
-        margin: 50px 0;
+        margin: 40px 0;
         line-height: 30px;
     }
     #burger:checked ~ #list{
@@ -179,5 +180,34 @@
         display: block;
         width: 100%;
 
+    }
+}
+@media(max-width: 430px)
+{
+    .mainbar{
+        padding: 0 5%;
+    }
+    .logo-header{
+        height: 55px;
+        width: 200px;
+    }
+    #list{
+        top: 55px;
+    }
+    .checkbtn{
+        margin-right: 10px;
+        /* top: 18px; */
+    }
+    #up 
+    {
+        left: 85%;
+    }
+    #up img{
+        width: 30px;
+    }
+}
+@media (max-width: 470px) {
+    .mainbar{
+        padding: 0 7%;
     }
 }
