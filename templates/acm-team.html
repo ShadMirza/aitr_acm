@@ -42,7 +42,7 @@
         {% for mentor in mentors %}
         <div class="teambox">
             <div class="teamimage">
-                <img src="{{ mentor.image.url }}" alt="">
+                <img src="{% static mentor.image.url %}" alt="">
             </div>
             <h3 class="name" style="text-align: center;">{{ mentor.name | title }}</h3>
             <h4 class="designation" style="text-align: center;">{{mentor.designation | title }}</h4>

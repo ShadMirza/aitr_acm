@@ -266,8 +266,8 @@
 
             {% for web_developer in team %}
             <div class="mySlides fade">
-              <img src="{{web_developer.image.url}}">
-            </div>
+              <img src="{% static web_developer.image.url %}">
+            </div> 
             {% endfor %}
 
           </div>
@@ -317,7 +317,7 @@
                 <input type="radio" name="r" id="r5">
                 {% for web_developer in team %}
                 <div class="slide s{{forloop.counter}}">
-                  <img src="{{web_developer.image.url}}">
+                  <img src="{% static web_developer.image.url %}">
                 </div>
                 {% endfor %}
               </div>

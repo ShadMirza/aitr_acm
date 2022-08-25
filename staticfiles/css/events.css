@@ -1,0 +1,274 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    font-size: 62.5%;
+    overflow-y: scroll;
+
+}
+
+body {
+    /* background: url('img/bg01.jpeg'); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-size: 100vw 100vh; */
+   
+    /* background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgGBgYGBggQBgYGBhYPBgYGDQ8ICRAWFREWFhURExMYHCggGBolGxMTITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NGg0NFSsZFR0rKysrKystNysrKysrKysrKysrKys3KysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAM0A9gMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFRABAQAAAAAAAAAAAAAAAAAAABH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AOziDqqiAKIAogCiAKIAogCiAKIAogCiAKIAogCiAKIAoiAlKyNRWqVkINUrIQapWQg1SshBqlZCDVKyEGqVkINUrIQapWQg1SshBqlZCDVKyEGqVkINUrIQaoypBilSlUUSlBaVKUFKlKQUSlBaVKUFKlKClSlBSpSgpUpQWiUoKVKUFKlKC0SlIKVKUFEoDNKzSqrRWaUGhmlBqlZpQaGaUGhmlBqlZpQaGaUGqM0oNFZpQapWaUGis0oNFZpQaKzSg0VmlBoZqgzSsjStUrIDVKyA1SsgNUrIDVKyA1SsgNUrIDVKyA1SsgNUrIDVKyA1SsgNUrIDVKyA1RkBmlSlVVpUpQWlSlBaVKUFpUpQWlSlBaVKUFpUpQWlSlBaVKUFpUpQWlSlBaVKUFpUpQWlSlBaJUBBmlaVoZpQaGaUGhmlBoZpQaGaUGhmlBoZpQaGaUGhmlBoZpQaGaUGhmlBoZpQaGaUGhmgM0qCi0qALSoAtKgC0qALSoAtKgC0qALSoAtKgC0qALSoAtKgC0qALSoCrREESlZpVVqlZpQapWaUGqVmlBqlZpQapWaUGqVmlBqlZpQapWaUGqVmlBqlZpQapWaUGqVmlBqlZpQapWaUGqM0BkQaVRAFEAUQBRAFEAUQBRAFEAUQBRAFEAUQBRAFEAURAQZFitDIQaGQg0MgNDIQaGQg0MhBoZCDQyEGhkINDIQaGQg0MhBoZCDQyEGhlSDFKlKqrSpSgtKlKC0qUoLSpSgtKlKC0qUoLSpSgtKlKC0qUoLSpSgtKlKC0qUoLSpSgtKlKC1WaAyINKogCiAKIAogCiAKIAogCiAKIAogCiAKIAogCiAKIgP/2Q=="); */
+    background-size: cover;
+    /* font-size: 10px; */
+    scroll-behavior: smooth;
+    font-weight: 400;
+    font-family: lato, Arial, Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+    background: linear-gradient(rgb(238, 204, 250), rgb(255 255 255 / 88%));
+    background-repeat: no-repeat;
+    
+}
+
+.event .header--text {
+
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.event .header--text h2 {
+
+    font-size: 4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4070F4;
+    line-height: 1.4;
+
+}
+/* .event .header--text h2::after{
+    position: absolute;
+    content: "";
+    width: 32rem;
+    height: 0.4rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 16.8rem;
+    background-color: #4070F4;
+} */
+.event .event--section {
+
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.event .event--content {
+
+    margin: 2rem 5rem;
+    width: 45rem;
+    position: relative;
+    z-index: -1;
+
+}
+
+.event--content .event--img {
+
+    overflow: hidden;
+    background: linear-gradient(#e69bff, #70a7fa);
+    height: 42rem;
+
+}
+
+.event--content .event--img img {
+
+    width: 80rem;
+
+    transition: all .5s;
+}
+
+.event--content .event--img img:hover {
+
+    transform: scale(1.2);
+    filter: brightness(.8);
+
+}
+
+.event .content--text {
+
+    width: 38rem;
+
+    padding: 2.5rem;
+    box-shadow: 0 6rem 4rem -1rem rgba(122, 122, 122, 0.295);
+    background: rgba(255, 255, 255, 0.874);
+
+    position: absolute;
+    top: 3.22rem;
+    right: 4rem;
+
+}
+
+.content--text .event--menu h4 {
+
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #182731;
+
+    line-height: 1.2;
+
+}
+
+.content--text .event--menu h4::after {
+
+    content: " ";
+    display: block;
+    width: 16rem;
+    height: 4px;
+    background: #0984e3;
+
+}
+
+.event--menu .event--detail {
+
+    margin: 1.2rem 0;
+
+    list-style-type: none;
+
+}
+
+.event--menu .event--detail li {
+
+    font-size: 1.7rem;
+    font-weight: 400;
+
+    padding: .4rem;
+
+}
+
+.event--menu .event--detail li i {
+
+    font-size: 1.4rem;
+    font-weight: 400;
+
+}
+
+.event--menu .event--detail li span {
+
+    font-size: 1.5rem;
+    font-style: italic;
+
+}
+
+.content--text .event--text h4 {
+
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    color: #062d49;
+    letter-spacing: 2px;
+    line-height: 1.7;
+
+}
+
+.content--text .event--text p {
+
+    font-size: 1.4rem;
+    font-weight: 400;
+
+}
+
+.content--text .btn {
+
+    margin: 3.5rem 0;
+}
+
+.content--text .btn a:link,
+.content--text .btn a:visited {
+
+    text-transform: uppercase;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 1.4rem 2.7rem;
+    border-radius: 2px;
+
+    color: #fff;
+    background: #ff7675;
+
+    transition: all .5s;
+
+}
+
+.content--text .btn a:hover {
+
+    letter-spacing: 2px;
+    background: #fc6f6f;
+}
+
+
+/* Responsive Section */
+
+@media only screen and (max-width: 767px) {
+    .event .event--section {
+
+        margin: 3rem 0;
+
+    }
+    .event .content--text {
+        width: auto;
+        padding: 2.5rem;
+        margin-left: 4rem;
+    }
+    .content--text .event--menu h4 {
+
+        font-size: 2.5rem;
+
+    }
+    .content--text .event--menu h4::after {
+
+        width: 10rem;
+
+    }
+    .content--text .event--text h4 {
+        font-size: 2rem;
+    }
+    .content--text .btn {
+
+        margin-top: 2.7rem;
+        margin-bottom: 1.7rem;
+
+    }
+    .content--text .btn a:link,
+    .content--text .btn a:visited {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        padding: 1.4rem 1.7rem;
+    }
+}
+@media(max-width: 430px)
+{
+    html{
+        font-size: 50%;
+    }
+    .event .header--text h2{
+        font-size: 3rem;
+
+    }
+    .event .header--text{
+        padding-top: 2.5rem;
+        padding-bottom: 0;
+    }
+}
+#partnow{
+    font-weight: bolder;
+    position: relative;
+    top: 10px; 
+    font-size: medium;
+    cursor: pointer;
+}
