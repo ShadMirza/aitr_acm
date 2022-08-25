@@ -1,7 +1,7 @@
 from datetime import date
 from distutils.command.upload import upload
 from django.db import models
-from matplotlib import image
+# from matplotlib import image
 import os
 
 # Create your models here.
