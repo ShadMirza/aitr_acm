@@ -9,8 +9,8 @@ class Event(models.Model):
     date = models.CharField(max_length=100)
     name = models.CharField(max_length=50)
     time = models.CharField(max_length=20)
-    venue = models.CharField(max_length=100, default='Acropolis Institue of Technology and Research, Indore')
-    detail = models.CharField(max_length=250, default='')
+    venue = models.TextField(max_length=100, default='Acropolis Institue of Technology and Research, Indore')
+    detail = models.TextField(max_length=250, default='')
     completed = models.BooleanField(default=False)
 
     def __str__(self):
